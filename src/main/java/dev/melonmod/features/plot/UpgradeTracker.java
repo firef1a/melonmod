@@ -229,7 +229,8 @@ public class UpgradeTracker extends Feature {
                     if (m.equals("Upgrade Town")) {
                         mkey = m + vecKey;
                     }
-                    String upgradeDesc = upgradeDescriptionMap.getOrDefault(mkey, "<no description>");
+                    if (!upgradeDescriptionMap.containsKey(mkey)) return;
+                    String upgradeDesc = upgradeDescriptionMap.get(mkey);
                     Mod.log("n:" + mkey + " d: " + upgradeDesc);
 
                     List<OrderedText> otList = Mod.MC.textRenderer.wrapLines(StringVisitable.plain(upgradeDesc), Mod.getWindowWidth() / 3);
