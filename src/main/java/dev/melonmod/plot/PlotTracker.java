@@ -5,7 +5,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class PlotTracker {
     public static boolean isOnMelonKing() {
-        assert Mod.MC.player != null;
+        if (Mod.MC.player == null) return false;
         Vec3d pos = Mod.MC.player.getPos();
         Vec3d start = new Vec3d(-975, 0, -4270);
         Vec3d end = new Vec3d(-975+301, 255, -4270+301);

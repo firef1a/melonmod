@@ -4,6 +4,7 @@ import dev.melonmod.features.commands.CommandAliaser;
 import dev.melonmod.features.commands.CommandHider;
 import dev.melonmod.features.item.ItemLoreViewer;
 import dev.melonmod.features.item.ItemTagViewer;
+import dev.melonmod.features.plot.FullInventoryTracker;
 import dev.melonmod.features.plot.UpgradeTracker;
 import net.minecraft.text.Text;
 
@@ -23,6 +24,7 @@ public class Features {
         add(new CommandHider());
         add(new CommandAliaser());
         add(new UpgradeTracker());
+        add(new FullInventoryTracker());
     }
 
     private static void add(Feature feature) { featureMap.put(feature.getFeatureID(), feature); }
